@@ -1,7 +1,10 @@
 ---
+
+   /*** Her henter vi fra supabase, vi har selv skrevet /rest/v1/ninaroende for at fange vores data  ***/
 const data = await fetch(
     "https://eqchkvjopeqebfwbmvay.supabase.co/rest/v1/ninaroende", 
     {
+      /*** Get betyder at hente  og headers er ting vi sender med, Apikey giver tilladelse til elementerne i supabasen***/
         method: "GET",
         headers: {
             apikey:
