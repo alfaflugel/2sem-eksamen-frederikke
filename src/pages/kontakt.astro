@@ -1,10 +1,210 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
-import Openinghours from "../components/Openinghours.astro"
+import Insta from "../components/Insta.astro"
+import "../styles/global.css";
 ---
 
-<MainLayout title="Forside">
+<MainLayout title="Kontakt">
+<h1>Kontakt</h1>
+    <article class="box2">
+       
+        <div class="midt_tekst">
+            <h2>Besøg min butik</h2>
+            <p>Besøg forretningen beliggende tæt på rundetårn. Her kan du opdage alle mine smykker i den hyggelige kælderforretning, bygget i 1731, med rå mure og fritlagte bjælker der skaber en eventyrlig atmosfære.  Du er altid velkommen til at kigge forbi, </p>
+        </div>
+         <img src="/img/chains_kontakt.webp" alt="">
+    </article>
 
-    
+<section class="grid_tider">
+    <img src="/img/butikken_forside.webp" alt="">
+  
+    <div class="grid_mobil">
+       
+
+		<div class="adress_mobil">
+			<h5>Adresse</h5>
+			<p>Store Kannikestræde 5 1169 <br>
+			København K</p>
+	    </div>
+
+        <div class="centered-content">  
+             <img class="line_mobil" src="/svg/kontakt_grafik.svg" alt="buet linie">
+        </div>
+		
+        <div class="grid_1">
+         
+			<h5>Åbningstider</h5>
+           
+            <div class="grid_1-1">
+
+            <div class="right">
+			<p>Mandag - Lørdag:</p>
+			<p>Søndag 3/12:</p>
+			<p>Søndag 10/12, 17/12:</p>
+			<p>Lørdag 23/12:</p>
+			<p>24/12 - 1/1:</p>
+		    </div>
+	
+
+		    <div>
+			<p>11:00 - 17:30</p>
+			<p>Lukket</p>
+			<p>11:00 - 16:00</p>
+			<p>11:00 - 15:00</p>
+			<p>Lukket</p>
+            </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+<article class="box2">
+<div>
+<div class="midt_tekst"> 
+<h2>Kontakt mig</h2>
+<p>Har du spørgsmål eller brug for råd og vejledning så kontakt mig enten over telefon eller emal.  </p>
+</div>     
+    <div class="midt_tekst">
+    <h3>Telefon</h3>
+    <p>+45 26 15 11 58 - kun i butikkens åbningstid</p>
+
+    <h3>Email</h3>
+    <p>info@ninaroende.dk </p>
+    </div>
+
+</div>
+
+<div>
+    <img src="/img/smykker_kontakt.webp" alt="">
+</div>
+</article>
+<Insta>
+
+</Insta>
 
 </MainLayout>
+
+<style>
+
+     h1{
+    text-align: center;
+    font-weight: 200;
+     font-size: var(--font-size-xxxl);
+  }
+
+
+    h2{
+	font-family: var(--font-family-header);
+	font-size: var(--font-size-l);
+	text-align: center;
+	font-weight: 200;
+	
+}
+
+h3{
+    font-family: var(--font-family-text);
+	font-size: var(--font-size-m);
+	text-align: left;
+	font-weight: 200;
+	
+}
+
+.box2{
+    background-color: var(--box-color);
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+
+
+.grid_mobil{
+
+display:grid;
+justify-content: content;
+margin-bottom: 4rem;
+}
+
+.grid_1{
+    display: flex;
+    flex-direction: column;
+}
+.line_mobil{
+    margin-top:2rem;
+    margin-bottom: 2rem;  
+}
+.centered-content{
+     text-align: center;
+    
+}
+.grid_1-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items:center;
+
+}
+
+ h5{
+font-family: var(--font-family-subtitle);
+font-weight: 200;
+font-size: var(--font-size-s);
+padding-bottom:1rem;
+text-align:center;
+}
+
+.right{
+    text-align: end;
+}
+
+p{
+font-family: var( --font-family-text);
+font-size: var( --font-size-s);
+font-weight: 200;
+
+}
+.adress_mobil{
+    text-align:center;
+    margin-top: 3rem;
+}
+
+.midt_tekst{
+    display: grid;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+	@media (min-width: 760px){
+
+h1{
+      font-size: var(--font-size-xxxl);
+      margin-top: 3rem;
+}
+.box2{
+display: grid;
+grid-template-columns: 1fr auto;
+}
+
+.grid_1-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items:center;
+    
+
+}
+
+.grid_tider{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items:center;
+
+}
+    }
+</style>
+

@@ -3,11 +3,12 @@
 const { data } = Astro.props;
 ---
 <a href=`/single-views/${data.slug}`>
-    <article>
+  
         <img src={"/smykker_webp/" + data.small_img} alt="">
         <h4>{data.name}</h4>
         <p>{data.short_des}</p>
-    </article>
+        <p class="price">{data.price} kr.</p>
+ 
 </a>
  <style>
 
@@ -27,7 +28,17 @@ font-weight: 200;
         text-decoration:none;
         color:var(  --text-color);
         max-width:200px;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+
         
+}
+
+.price{
+    display: flex;
+    align-items: baseline;
 }
 
 

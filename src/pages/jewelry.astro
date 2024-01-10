@@ -1,6 +1,6 @@
 ---
 
-   /*** Her henter vi fra supabase, vi har selv skrevet /rest/v1/ninaroende for at fange vores data  ***/
+   /*** Her henter vi fra supabase, vi har selv skrevet /rest/v1/ninaroende for at fange vores data - asynchon fetch anmodning ***/
 const data = await fetch(
     "https://eqchkvjopeqebfwbmvay.supabase.co/rest/v1/ninaroende", 
     {
@@ -11,6 +11,7 @@ const data = await fetch(
                 "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVxY2hrdmpvcGVxZWJmd2JtdmF5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDE4NzIxMTksImV4cCI6MjAxNzQ0ODExOX0.O2_NQhUNI9HIpTCIUfmjA-0sTTdDlV9B_WtqGsaBY_I"
         },
     }
+    /****konvertere dataen til JSON */
 ).then((res) => res.json());
 console.log(data.type)
 

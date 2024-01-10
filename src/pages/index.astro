@@ -1,13 +1,14 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
-import Openinghours from "../components/Openinghours.astro"
+import Insta from "../components/Insta.astro"
+import "../styles/global.css";
 ---
 
 <MainLayout title="Forside">
 <article class="grid_2-1">
 	<section class="img_grid1">
-		<div>
-			<h1>Bliv inspireret...</h1>
+		<div class="overskrift">
+			<h1>Unikke smykker til dig...</h1>
 			<p>Håndlavet - Autentisk - Organisk</p>
 		</div>
 		<div>
@@ -35,58 +36,61 @@ import Openinghours from "../components/Openinghours.astro"
 	<article class="box">
 		<h3>Det der er vigtigt for dig og mig...</h3>
 		<section class="carousel_3">
-			<div class="icons">
+			<div class="icons1">
 				<img src="/icons/tree.svg" alt="tree">
 				<p>Du planter et træ i Danmark hver gang du køber et smykke</p>
 			</div>
 			<div class="vl"></div>
-			<div class="icons">
+			<div class="icons1">
 				<img  src="/icons/heart.svg" alt="heart">
 				<p>Håndlavet med kærlighed så du får den bedste kvalitet</p>
 			</div>
 			<div class="vl"></div>
-			<div class="icons">
+			<div class="icons1">
 				<img  src="/icons/fragt.svg" alt="fragt">
-				<p>Gratis og hurtig fragt i hele Danmark</p>
+				<p>Gratis og hurtig fragt i hele Danmark og 2-4 dages leveringstid</p>
 			</div>
 		</section>
 	</article>
 	
 	<article class="grid_1-1">
 		<section class="carousel">
-			<img class="big_img" src="/smykker_webp/penelope_ross_store_02.webp" alt="penelope rosse">
-			<img class="mobil_img" src="/smykker_webp/penelope_ross_store_01_m.webp" alt="penelope rosse" class="mobile">
-		<img class="web_img" src="/smykker_webp/penelope_ross_store_01.webp" alt="penelope rosse" class="desktop">
+			<img class="big_img" src="/img/necklace_forside_mobil1.webp" alt="penelope rosse">
+			<img class="mobil_img" src="/img/necklace_forside_mobil2.webp" alt="penelope rosse" class="mobile">
+		
 			
 			
 			</section>
 	
 		<section class="mobile_box">
-			<h2>En klassisk favorit</h2>
-			<p>Armbåndet lægger sig organisk om dit håndled. Placeringen for enderne af de blå iolitter underbygger kulørens intensitet. Kurverne er kreeret i hånden, hvilket giver hvert unikke smykke sit eget skulpturelle udtryk.</p>
+			<h2>Empress Dowager halskæde</h2>
+			
+			<h4>En klassisk favorit</h4>
+			
+			<p>Halskædens vedhæng er behandlet på overfladen, så smykket ser ud, som om det er fundet i en skattekiste og har opnået sin smukke patina efter tusinde år på havets bund. Øskenet er en vigtig del af designet. Det er forarbejdet på en måde, så det fremstår som om det er trukket og vredet ud af vedhænget. I midten sidder en lille yndig lyserød granat.</p>
+			
+			<p>Pris: 1.350,00 kr.</p>
 			<button class="knap">Læg i kurv</button>
 		</section>
 	</article>
 
-	<Openinghours>
 
-</Openinghours>
 
 	<article class="box">
 		<h3>Tak for jeres kærlighed</h2>
 		<hr>
-		<section class="carousel_3">
-			<div class="icons">
+		<section class="carousel_2">
+			<div class="icons2">
 				<h4>Anne Zimmer</h4>
 				<p>Smukke, smukke smykker, fantastisk stemningsfuldt lokale og super betjening. Det kunne ikke være bedre!</p>
 				<img src="/svg/stars.svg" alt="stars">
 			</div>
-			<div class="icons">
+			<div class="icons2">
 				<h4>Anne Mette</h4>
 				<p>Jeg er VILD med smykkerne fra Nina Rønde og er tilbagevende kunde gennem mange år - både i butikken ved Rundetårn og online. Altid super god og personlig service - og smykkerne er unikke og i en god kvalitet. Største anbefaling herfra.</p>
 				<img src="/svg/stars.svg" alt="stars">
 			</div>
-			<div class="icons">
+			<div class="icons2">
 				<h4>Karina Andersen</h4>
 				<p>Hurtig levering og så får man plantet et træ for hvert smykke man køber :-)</p>
 				<img src="/svg/stars.svg" alt="stars">
@@ -94,6 +98,9 @@ import Openinghours from "../components/Openinghours.astro"
 		</section>
 	</article>
 
+	<Insta>
+    
+</Insta>
 
 </MainLayout>
 
@@ -127,8 +134,9 @@ gap: 2rem;
 	display: flex;
 	justify-content: flex-end;
 	background-color: var( --box-color);
-	padding: 4px;
+	padding: 5px;
 	max-width: 681px;
+	margin-top: -5px;
 }
 	/************** SCROLL TIL BILLEDER****************/
 
@@ -141,7 +149,14 @@ gap: 2rem;
 		display: grid;
 		grid-template-columns: 100% 100% 100%;
 		max-width: 100%;
-		overflow: scroll;
+		overflow-x: scroll;
+	}
+
+			.carousel_2 {
+		display: grid;
+		grid-template-columns: 100% 100% 100%;
+		max-width: 100%;
+		overflow-x: scroll;
 	}
 /**** vertikale linjer mellem ikonerne */
 .vl{
@@ -151,14 +166,24 @@ gap: 2rem;
 	.box{
 	display: grid;
 	justify-items: center;
-	margin-top: 3rem;
-	margin-bottom: 3rem;
+	margin-top: 7rem;
+	margin-bottom: 7rem;
 	gap: 1rem;
 	background-color: var(--box-color);
 }
 
 /********* elementerne i scroll containeren *******/
-.icons{
+.icons1{
+
+display: grid;
+gap: 2rem;
+place-items: center;
+text-align: center;
+padding-left: 1rem;
+padding-right: 1rem;
+padding-bottom: 1rem;
+}
+.icons2{
 
 display: grid;
 gap: 2rem;
@@ -177,6 +202,7 @@ padding-bottom: 1rem;
     font-size: var(--font-size-s);
 
 	   padding: 10px 70px;
+	   font-weight: 200;
 }
 
 /**** OVERSKRIFTER *******/
@@ -206,6 +232,11 @@ h4{
 	font-size: var( --font-size-m);
 }
 
+.overskrift{
+display: grid;
+gap: 5%;
+}
+
 /***** Horizontale linje i sektionen med anmeldelser */
 hr{
 min-width: 230px;
@@ -219,7 +250,7 @@ width: auto;
     display: grid;
 	place-items: center;
 	gap: 2rem;
-    margin: 2rem 1rem 1rem 1rem;
+    margin: 1rem 1rem 7rem 1rem;
     padding: 3rem;
     background-color: var(--box-color);
 }
@@ -241,6 +272,7 @@ width: auto;
 		margin-right: auto;
 		gap: 1rem;
 		margin-bottom: 3rem;
+		margin-top: 3rem;
 	}
 	.img_grid1{
 display: flex;
@@ -266,7 +298,12 @@ justify-content: space-between;
 		overflow: auto;
 		align-items: ;
 	}
-
+	
+.carousel_2 {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+overflow: auto;
+}
 	.box{
 	display: grid;
 	margin-top: 9rem;
@@ -275,7 +312,7 @@ justify-content: space-between;
 	background-color: var(--box-color);
 }
 
-.icons{
+.icons1{
 
 display: grid;
 gap: 2rem;
@@ -285,7 +322,12 @@ padding-left: 1rem;
 padding-right: 1rem;
 padding-bottom: 1rem;
 max-width: 300px;
-
+align-items:end ;
+}
+.icons2{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
 }
 
 h3{
@@ -317,14 +359,15 @@ hr{
         width: auto;
         position: absolute;
         z-index: 1;
-        transform: translate(145%,35%)
+        transform: translate(138%,40%)
 }
 
 .mobil_img{
 	display: none;
 }
 .big_img{
-  width: 400px;
+  width: auto;
+  height: auto;
 }
 
   .mobile_box{
@@ -333,8 +376,6 @@ hr{
         padding: 3rem;
        
     }
-
-	
 
 }
 </style>

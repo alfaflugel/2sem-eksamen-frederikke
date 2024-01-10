@@ -1,0 +1,96 @@
+---
+import "../styles/global.css";
+---
+
+<article>
+    <h2>Følg med på Instagram...</h2>
+    
+<div class="insta">
+<img src="/img/insta1.webp" alt="">
+<img src="/img/insta2.webp" alt="">
+<img src="/img/insta3.webp" alt="">
+<img src="/img/insta4.webp" alt="">
+</div>
+<div class="grid_1-1">
+    <p>Se med på instagram og find inspiration til dit næste smykke...</p>
+    <button>Følg med her</button>
+</div>
+    
+</article> 
+
+
+<style>
+    article{
+        margin-bottom: 3rem;
+    }
+
+    .insta{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1%;
+        margin:1rem;
+
+    }
+
+    .grid_1-1{
+display: grid;
+place-content: center;
+gap: 1rem;
+    }
+
+
+    h2{
+    font-family: var( --font-family-header);
+font-size: var(--font-size-xl);
+font-weight: 200;
+text-align: center;
+
+}
+
+p{
+font-family: var(--font-family-text);
+font-size: var(--font-size-xs);
+text-align: center;
+}
+
+button {
+    background-color: var(--text-color);
+    color: var(--text-color-white);
+    border: none;
+    font-family: var( --font-family-text);
+    font-size: var(--font-size-s);
+	   padding: 10px 70px;
+       max-width: 16rem;
+       place-self: center;
+}
+
+     @media (min-width: 760px) {
+p{
+font-family: var(--font-family-text);
+font-size: var(--font-size-s);
+text-align: center;
+}
+
+.grid_1-1{
+    display: flex;
+   justify-content: space-between;
+}
+
+.insta{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom:2rem;
+    margin-left: 0;
+    margin-right: 0;
+    gap:1%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+ article{
+    margin-bottom: 4rem;
+ }
+     }
+
+</style>
