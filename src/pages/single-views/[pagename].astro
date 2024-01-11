@@ -1,17 +1,26 @@
 ---
 export async function getStaticPaths() {
+
+    /**await fetch(...): await bruges til at vente på, at fetch-anmodningen er færdig **/
   const data = await fetch("https://eqchkvjopeqebfwbmvay.supabase.co/rest/v1/ninaroende",
     {
-        method: "GET",
+         /*** Get betyder at hente  og headers er ting vi sender med, Apikey giver tilladelse til elementerne i supabasen***/
+        
+         method: "GET",
         headers: {
             apikey:
                 "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVxY2hrdmpvcGVxZWJmd2JtdmF5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDE4NzIxMTksImV4cCI6MjAxNzQ0ODExOX0.O2_NQhUNI9HIpTCIUfmjA-0sTTdDlV9B_WtqGsaBY_I"
         },
+/** konvertere det til JSON-format. */
     }).then(response => response.json());
 
   return data.map((smykke) => {
     return {
+        /*Hver side får en parameter (pagename), 
+        som er smykkets slug (en unik identifikator eller sti for hvert smykke).*/
       params: { pagename: smykke.slug },
+      /**Vi sender data om hvert smykke som egenskaber (props) til den komponent,
+     der skal generere siden. */
       props: { myData: smykke },
     };
   });
@@ -127,6 +136,7 @@ button {
     color: var(--text-color-white);
     place-items: center;
     margin-top: 25%;
+    border: none;
 }
 .mobile_box{
     display: grid;
